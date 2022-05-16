@@ -16,19 +16,19 @@ function playRound(playerSelection, computerSelection) {
 
 
     if (playerChoice == computerChoice) {
-        return "MATCH DRAW!";
+        return "MATCH DRAW!"+" "+ playerScore + " " + computerScore;
     }
     else if (playerChoice == 'ROCK') // && computerChoice == 'PAPER')
     {
         if (computerChoice == 'PAPER') {
             // console.log("COMPUTER WINS!");
             computerScore++;
-            return 'COMPUTER WINS!'
+            return 'COMPUTER WINS!' +" "+ playerScore + " " + computerScore
             
         } else {
             // console.log('PLAYER WINS!');
             playerScore++;
-            return 'PLAYER WINS!';
+            return 'PLAYER WINS!'+" "+ playerScore + " " + computerScore;
             
         }
     }
@@ -37,12 +37,12 @@ function playRound(playerSelection, computerSelection) {
         if (computerChoice == 'ROCK') {
             // console.log("COMPUTER WINS!");
             computerScore++;
-            return 'COMPUTER WINS!'
+            return 'COMPUTER WINS!'+" "+ playerScore + " " + computerScore
             
         } else {
             // console.log('PLAYER WINS!');
             playerScore++;
-            return 'PLAYER WINS!';
+            return 'PLAYER WINS!'+" "+ playerScore + " " + computerScore;
             
         }
     }
@@ -51,12 +51,12 @@ function playRound(playerSelection, computerSelection) {
         if (computerChoice == 'SCISSOR') {
             // console.log("COMPUTER WINS!");
             computerScore++;
-            return 'COMPUTER WINS!'
+            return 'COMPUTER WINS!'+" "+ playerScore + " " + computerScore
             
         } else {
             // console.log('PLAYER WINS!');
             playerScore++;
-            return 'PLAYER WINS!'
+            return 'PLAYER WINS!'+" "+ playerScore + " " + computerScore
         }
     }
 
@@ -65,5 +65,17 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+function game()
+{
+    let rounds = 5;
+    while(rounds != 0)
+    {
+        rounds--;
+        // playRound();
+        console.log( playRound(prompt('ROCK PEPAH SCISSOR'), computerPlay()));
+     }
+    
+}
 
-console.log( playRound('paper', computerPlay()));
+// console.log( playRound('paper', computerPlay()));
+game();
