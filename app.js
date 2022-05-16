@@ -1,26 +1,69 @@
-let symbols = ['ROCK', 'PAPER','SCISSOR'];
-// console.log(symbols[2]);
-let theRandomNumber = Math.floor(Math.random() * 3) ;
+let symbols = ['ROCK', 'PAPER', 'SCISSOR'];
 let playerScore = 0;
 let computerScore = 0;
 
-// console.log(symbols[theRandomNumber]);
-
-function playRound(playerSelection, computerSelection)
-{
-    
-
-    if(playerSelection.toUpperCase() == computerSelection)
-    {
-        console.log("MATCH DRAW!");
-    }
-    
-}
 
 
-function computerPlay()
-{
+function computerPlay() {
+    let theRandomNumber = Math.floor(Math.random() * 3);
     return symbols[theRandomNumber].toUpperCase();
 }
+function playRound(playerSelection, computerSelection) {
+    
+    let playerChoice = playerSelection.toUpperCase();
+    let computerChoice = computerSelection;
 
-playRound('scissor', computerPlay());
+
+
+    if (playerChoice == computerChoice) {
+        return "MATCH DRAW!";
+    }
+    else if (playerChoice == 'ROCK') // && computerChoice == 'PAPER')
+    {
+        if (computerChoice == 'PAPER') {
+            // console.log("COMPUTER WINS!");
+            computerScore++;
+            return 'COMPUTER WINS!'
+            
+        } else {
+            // console.log('PLAYER WINS!');
+            playerScore++;
+            return 'PLAYER WINS!';
+            
+        }
+    }
+    else if (playerChoice == 'SCISSOR') // && computerChoice == 'PAPER')
+    {
+        if (computerChoice == 'ROCK') {
+            // console.log("COMPUTER WINS!");
+            computerScore++;
+            return 'COMPUTER WINS!'
+            
+        } else {
+            // console.log('PLAYER WINS!');
+            playerScore++;
+            return 'PLAYER WINS!';
+            
+        }
+    }
+    else if (playerChoice == 'PAPER') // && computerChoice == 'PAPER')
+    {
+        if (computerChoice == 'SCISSOR') {
+            // console.log("COMPUTER WINS!");
+            computerScore++;
+            return 'COMPUTER WINS!'
+            
+        } else {
+            // console.log('PLAYER WINS!');
+            playerScore++;
+            return 'PLAYER WINS!'
+        }
+    }
+
+
+
+
+}
+
+
+console.log( playRound('paper', computerPlay()));
