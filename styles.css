@@ -1,0 +1,50 @@
+.imageBox
+{
+    text-align: center;
+    background-color: black
+
+}
+
+.hands
+{
+    border: solid rgb(255, 183, 0) 2px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px;
+    background-color: azure;
+    
+}
+
+.handImg
+{
+    max-width: 100%;
+}
+.buttons
+{
+    text-align: center;
+}
+button{
+    font-size: 50px;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: bisque;
+}
+
+h1{
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    /* word-spacing: 340px; */
+    font-size: 40px;
+    
+}
+
+span
+{
+    /* border-bottom: solid 3px orange; */
+    background-color: rgb(255, 165, 101);
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
